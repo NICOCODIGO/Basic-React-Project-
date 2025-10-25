@@ -1,5 +1,8 @@
+// this component displays the IP information card if the IP 
+// is valid and fetched successfully from the user input 
+
 export default function IpCard({ info }) {
-  if (!info) return null;
+  if (!info) return null; // No info to display if info is null meaning no data fetched yet (e.g., loading state)
 
   return (
     <div className="card">
@@ -12,3 +15,5 @@ export default function IpCard({ info }) {
     </div>
   );
 }
+
+

@@ -6,7 +6,7 @@ const IPv4 =
 const IPv6 =
   /^(?:([A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}|([A-Fa-f0-9]{1,4}:){1,7}:|([A-Fa-f0-9]{1,4}:){1,6}:[A-Fa-f0-9]{1,4}|([A-Fa-f0-9]{1,4}:){1,5}(:[A-Fa-f0-9]{1,4}){1,2}|([A-Fa-f0-9]{1,4}:){1,4}(:[A-Fa-f0-9]{1,4}){1,3}|([A-Fa-f0-9]{1,4}:){1,3}(:[A-Fa-f0-9]{1,4}){1,4}|([A-Fa-f0-9]{1,4}:){1,2}(:[A-Fa-f0-9]{1,4}){1,5}|[A-Fa-f0-9]{1,4}:((:[A-Fa-f0-9]{1,4}){1,6})|:((:[A-Fa-f0-9]{1,4}){1,7}|:))$/;
 
-export function isValidIp(value) {
+export function isValidIp(value) { // returns true if value is a valid IPv4 or IPv6 address, and then this can be called in app.jsx
   const v = value.trim();
   if (!v) return false;             // empty is not a valid IP (we’ll handle “use my IP” separately)
   return IPv4.test(v) || IPv6.test(v);

@@ -1,3 +1,5 @@
+//THIS FILE HANDLES FETCHING IP DATA FROM THE REAL API 
+
 const BASE_URL = "https://api.ipquery.io";
 
 export async function getMyIp() {
